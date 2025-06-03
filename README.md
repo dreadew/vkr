@@ -8,6 +8,29 @@
 Используется датасет "AI4I 2020 Predictive Maintenance Dataset" (10 000 записей, 14 признаков).
 Подробнее: https://archive.ics.uci.edu/dataset/601/predictive+maintenance+dataset
 
+## Запуск в докере
+Выполните команды:
+```
+docker build -t vkr-app .
+docker run -p 8501:8501 vkr-app
+```
+Затем перейдите в браузере по адресу: `http://localhost:8501`
+
+## Установка и запуск вне докера
+1. Клонируйте репозиторий:
+   ```
+   git clone <ссылка на репозиторий>
+   cd predictive_maintenance_project
+   ```
+2. Установите зависимости:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Запустите приложение:
+   ```
+   streamlit run app.py
+   ```
+
 ## Структура репозитория
 - `app.py`: Основной файл приложения.
 - `analysis_and_model.py`: Страница с анализом данных и моделью.
